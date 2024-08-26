@@ -1,0 +1,111 @@
+body {
+  background-color: #f8d7da;
+  background-image: url("https://worldofprintables.com/wp-content/uploads/2023/07/Kawaii-Kitten-Cute-Cat-Wallpaper.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #343a40;
+}
+
+.header {
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.new-item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.input-text {
+  flex: 1;
+}
+
+.input-text input {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.task-list{
+  list-style: none;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition-duration: 0.4s;
+  box-shadow: 0 3px #999;
+  margin-left: 5px;
+}
+
+button:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(2px);
+}
+
+/* Specific button styles */
+.btn-add {
+  background-color: #edec9d;
+  margin-left: 86%;
+  margin-top: 10px;
+}
+
+.btn-add:hover {
+  background-color: #d5d02c;
+}
+
+.btn-add:active {
+  background-color: #edec9d;
+}
+
+.btn-danger {
+  background-color: #ce6868;
+}
+
+.btn-danger:hover {
+  background-color: #d81616;
+  color: #ce6868;
+}
+
+.btn-edit {
+  background-color: #055eed;
+  margin-left: 100px;
+  
+}
+
+.btn-edit:hover {
+  background-color: #0865f0;
+  color: #93d2e7;
+}
+
+.btn-save{
+  background-color: #2ecc71;
+}
+
+.btn-discard{
+  background-color: #ec4444;
+}
