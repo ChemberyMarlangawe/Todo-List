@@ -1,9 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import "./style.css";
 
 export default function App() {
   const [newItem, setNewItem] = useState("");
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(()=> {
+    const storedTodos = localStorage.getItem("Task");
+    return storedTodos ==null? [] : JSON.parse(storedTodos);
+  });
   const [editID, setEditID] = useState(null);
   const [editTodo, setEditTodo] = useState("");
   const [originalTitle, setOriginalTitle] = useState("");
@@ -52,6 +55,10 @@ export default function App() {
     setEditID(null);
     setOriginalTitle("");
   }
+
+  useEffect(() => { 
+    localStorage.setItem('Task', JSON.stringify(todos))
+  }, [todos])
 
 
   return (
