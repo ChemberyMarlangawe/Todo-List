@@ -7,7 +7,7 @@ export default function App() {
     const storedTodos = localStorage.getItem("Task");
     return storedTodos ==null? [] : JSON.parse(storedTodos);
   });
-  const [editID, setEditID] = useState(null);
+  const [editID, setEditID] = useState(null); 
   const [editTodo, setEditTodo] = useState("");
   const [originalTitle, setOriginalTitle] = useState("");
 
@@ -38,6 +38,7 @@ export default function App() {
     const todoToEdit = todos.find(todo => todo.id === id);
     setEditID(id);
     setEditTodo(todoToEdit.title);
+    setOriginalTitle(todoToEdit.title);
   }
 
   function saveEdit() {
